@@ -18,6 +18,9 @@ body{
     padding: 15px 10px 10px 10px;
     overflow: auto;
 }
+.code-editor-container::-webkit-scrollbar{
+    display: none;
+}
 .code-editor{
     height: 430px;
     background-color: rgb(12, 17, 20);
