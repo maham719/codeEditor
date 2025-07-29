@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.code-editor-container{
+    width: 100%;
+    height: 70%;
+    background-color: rgb(12, 17, 20);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 15px 10px 10px 10px;
+    overflow: auto;
+}
+.code-editor{
+    height: 430px;
+    background-color: rgb(12, 17, 20);
+   box-shadow: 2px 2px 10px black;
+   border: 2px solid rgba(255, 255, 255, 0.104);
+   overflow: auto;
+position: relative;
+}
+.header{
+    width: 100%;
+    height: 50px;
+   box-shadow: 2px 4px 10px black;
+    border-radius: 0px 0px 10px 10px ;
+    padding:20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.left-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.left-header span{
+    color: rgba(255, 255, 255, 0.628);
+    font-size: 20px;
+}
+.right-header img{
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.right-header img:hover{
+    scale: 120%;
+}
+.code-editor textarea{ 
+  width: 100%;
+  height: calc(100% - 55px);
+  background-color: rgb(12, 17, 20);
+  border: none;
+  position: absolute;
+  bottom: 0;
+  outline: none;
+  color: rgba(255, 255, 255, 0.736);
+  padding: 10px 20px;
+font-size: 18px;
+resize: none;
+overflow: auto;
+font-family: monospace;
+}
+.code-editor textarea::-webkit-scrollbar {
+  width: 0.525rem;
+}
+.code-editor textarea::-webkit-scrollbar-track {
+  background:rgb(12, 17, 20) ;
+}
+.code-editor textarea::-webkit-scrollbar-thumb {
+  background: rgba(30, 37, 41, 0.73);
+}
+.code-editor textarea::-webkit-scrollbar-thumb:hover{
+    cursor: default;
+}
+.output-container{
+    width: 100%;
+    height: 30%;
+    box-shadow: 2px -4px 10px rgb(36, 71, 72);
+     color: rgba(255, 255, 255, 0.628);
+    font-size: 20px;
+    z-index: 1;
+    position: fixed;
+    bottom: 0;
+    transition: all 0.5s ease;
+}
+.output-head{
+    width: 100%;
+    height: 60px;
+ background-color: rgb(12, 17, 20);
+ display: flex;
+ align-items: center;
+ justify-content: right;
+ gap: 20px;
+ padding: 20px;
+}
+.output-head img{
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.output-head img:hover{
+    scale: 120%;
+}
+#output{
+    width: 100%;
+    height: calc(100% - 60px);
+    overflow: auto;
+}
+.output-full-active{
+    height: 100%;
+    background-color: white;
+}
+#full-screen{
+    transition: all 1s;
+}
+.html-input::selection{
+background-color: #E34F26;
+}
+.css-input::selection{
+background-color: #35A8DB;
+}
+.js-input::selection{
+background-color: #D3B62A;
+}
